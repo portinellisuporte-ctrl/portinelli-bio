@@ -8,93 +8,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#070605;
-    --gold:#e8b04a;
-    --gold-light:#ffd98a;
-    --gold-deep:#9a6a1c;
-    --text:#f3ead8;
-    --muted:#a99a80;
-  }
+  :root{--bg:#070605;--gold:#e8b04a;--gold-light:#ffd98a;--gold-deep:#9a6a1c;--text:#f3ead8;--muted:#a99a80;}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{min-height:100%}
-  body{
-    background:
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,176,74,.18), transparent 70%),
-      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(232,176,74,.10), transparent 70%),
-      var(--bg);
-    color:var(--text);
-    font-family:'Inter',system-ui,sans-serif;
-    display:flex;justify-content:center;
-    padding:32px 18px 48px;
-  }
+  body{background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,176,74,.18), transparent 70%),radial-gradient(ellipse 60% 40% at 50% 100%, rgba(232,176,74,.10), transparent 70%),var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;display:flex;justify-content:center;padding:32px 18px 48px;}
   .wrap{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;text-align:center}
-
-  .cover{
-    width:100%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;position:relative;
-    border:1px solid rgba(232,176,74,.45);
-    box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 20px 60px rgba(232,176,74,.18), 0 0 120px rgba(232,176,74,.08);
-  }
+  .cover{width:100%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;position:relative;border:1px solid rgba(232,176,74,.45);box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 20px 60px rgba(232,176,74,.18), 0 0 120px rgba(232,176,74,.08);}
   .cover img{width:100%;height:100%;object-fit:cover;display:block}
-
-  .handle{
-    margin-top:26px;
-    font-family:'Cinzel',serif;font-weight:700;letter-spacing:.14em;
-    font-size:1.05rem;color:var(--gold-light);
-  }
-  .tagline{
-    margin-top:8px;color:var(--muted);font-size:.92rem;line-height:1.5;max-width:340px
-  }
-
+  .handle{margin-top:26px;font-family:'Cinzel',serif;font-weight:700;letter-spacing:.14em;font-size:1.05rem;color:var(--gold-light);}
+  .tagline{margin-top:8px;color:var(--muted);font-size:.92rem;line-height:1.5;max-width:340px}
   .divider{display:flex;align-items:center;gap:12px;width:100%;margin:26px 0 22px}
   .divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-deep),transparent)}
   .divider svg{width:26px;height:18px;flex:none}
-
   .links{width:100%;display:flex;flex-direction:column;gap:14px}
-  .btn{
-    position:relative;display:flex;align-items:center;gap:14px;
-    width:100%;padding:16px 18px;border-radius:14px;
-    text-decoration:none;color:var(--text);
-    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
-    border:1px solid rgba(232,176,74,.35);
-    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease;
-    overflow:hidden;
-  }
-  .btn::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(110deg,transparent 30%,rgba(255,217,138,.18) 50%,transparent 70%);
-    transform:translateX(-100%);transition:transform .7s ease;
-  }
-  .btn:hover,.btn:focus-visible{
-    transform:translateY(-2px);border-color:var(--gold);
-    box-shadow:0 10px 30px rgba(232,176,74,.22);
-    background:linear-gradient(180deg,rgba(232,176,74,.10),rgba(232,176,74,.03));
-    outline:none;
-  }
+  .btn{position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border-radius:14px;text-decoration:none;color:var(--text);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid rgba(232,176,74,.35);transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease;overflow:hidden;}
+  .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,217,138,.18) 50%,transparent 70%);transform:translateX(-100%);transition:transform .7s ease;}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 30px rgba(232,176,74,.22);background:linear-gradient(180deg,rgba(232,176,74,.10),rgba(232,176,74,.03));outline:none;}
   .btn:hover::after{transform:translateX(100%)}
   .btn:active{transform:translateY(0)}
-
-  .icon{
-    width:44px;height:44px;border-radius:12px;flex:none;
-    display:grid;place-items:center;
-    background:radial-gradient(circle at 30% 25%,var(--gold-light),var(--gold) 45%,var(--gold-deep));
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.4), 0 4px 14px rgba(232,176,74,.3);
-  }
+  .icon{width:44px;height:44px;border-radius:12px;flex:none;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,var(--gold-light),var(--gold) 45%,var(--gold-deep));box-shadow:inset 0 1px 0 rgba(255,255,255,.4), 0 4px 14px rgba(232,176,74,.3);}
   .icon svg{width:22px;height:22px;fill:#1a1206}
   .label{flex:1;text-align:left}
   .label strong{display:block;font-family:'Cinzel',serif;font-weight:700;letter-spacing:.06em;font-size:1rem;color:var(--gold-light)}
   .label small{display:block;margin-top:3px;color:var(--muted);font-size:.8rem}
   .arrow{width:18px;height:18px;flex:none;stroke:var(--gold);fill:none;stroke-width:2;opacity:.8;transition:transform .2s}
   .btn:hover .arrow{transform:translateX(3px)}
-
-  .btn.primary{
-    border-color:var(--gold);
-    background:linear-gradient(180deg,rgba(232,176,74,.16),rgba(232,176,74,.05));
-    box-shadow:0 0 0 1px rgba(232,176,74,.15), 0 10px 34px rgba(232,176,74,.16);
-  }
-
+  .btn.primary{border-color:var(--gold);background:linear-gradient(180deg,rgba(232,176,74,.16),rgba(232,176,74,.05));box-shadow:0 0 0 1px rgba(232,176,74,.15), 0 10px 34px rgba(232,176,74,.16);}
   footer{margin-top:34px;color:#6f6553;font-size:.75rem;letter-spacing:.12em;font-family:'Cinzel',serif}
-
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -114,20 +54,9 @@
     </div>
 
     <nav class="links">
-      <a class="btn primary" href="https://pay.cakto.com.br/cfugony_1270319" target="_blank" rel="noopener">
+      <a class="btn primary" href="https://chat.whatsapp.com/Gz8JHLnMoFnLhWCKwk9emY?s=cl&p=i&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">
         <span class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9.5 5 20h14l2-10.5-5 3.5-4-7-4 7-5-3.5zM5 21.2h14v1.3H5z"/></svg>
-        </span>
-        <span class="label">
-          <strong>GARANTA SEU ACESSO À IA AÇÕES</strong>
-          <small>Compra segura via Cakto</small>
-        </span>
-        <svg class="arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-
-      <a class="btn" href="https://chat.whatsapp.com/Gz8JHLnMoFnLhWCKwk9emY?s=cl&p=i&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">
-        <span class="icon">
-          <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.910-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.27-.68-2.77-1.090-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>
         </span>
         <span class="label">
           <strong>Grupo VIP no WhatsApp</strong>
